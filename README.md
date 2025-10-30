@@ -1,16 +1,82 @@
-# React + Vite
+# Speak Tutor Onboarding Experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive, animated onboarding experience for Speak Tutor, showcasing key features through a smooth scrolling interface.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Frontend library for building user interfaces
+- **TypeScript**: For type-safe JavaScript development
+- **Tailwind CSS**: For utility-first styling and responsive design
+- **Vite**: As the build tool and development server
+- **React Icons**: For including various icons in the interface
 
-## React Compiler
+## Project Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clone the repository:
+```bash
+git clone https://github.com/anjalikray/Academically-Global---SWE-Assignment.git
+cd Academically-Global---SWE-Assignment
+```
 
-## Expanding the ESLint configuration
+2. Install dependencies:
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Start the development server:
+```bash
+npm run dev
+```
+
+## Component Structure
+
+The project follows a modular component structure:
+
+### `OnBoardingScreens.tsx`
+- Main component handling the onboarding experience
+- Utilizes React's `useCallback` and `useState` hooks for performance optimization
+- Implements scroll-based animations and responsive layouts
+- Contains three main sections:
+  1. Goals and Motivation
+  2. Topic Selection
+  3. Tutor Relationship
+  4. User Testimonial
+
+### Component Features
+
+- **Screen Management**: Uses an array of screen objects for easy maintenance and scalability
+- **Dynamic Styling**: Implements dynamic style calculations based on scroll position
+- **Responsive Design**: Adapts to different screen sizes using Tailwind's responsive classes
+- **Interactive Elements**: Includes hover effects and clickable cards
+
+## Animations and Responsiveness
+
+### Animations
+1. **Scroll-Based Transitions**:
+   - Uses `scrollProgress` state to track user scroll position
+   - Implements smooth transitions using CSS transforms and opacity
+   - Card stacking effect with dynamic scaling and positioning
+
+2. **Interactive Elements**:
+   - Hover animations on cards using `transition-transform` and `hover:scale-105`
+   - Smooth opacity transitions for content visibility
+   - Custom easing functions for natural movement
+
+### Responsive Design
+- **Mobile-First Approach**:
+  - Uses Tailwind's responsive prefixes (`md:`, `lg:`)
+  - Flexible layouts with percentage-based widths
+  - Dynamic text sizing for different screens
+
+- **Layout Adaptations**:
+  - Stack layout on mobile devices
+  - Side-by-side layout on larger screens
+  - Responsive padding and margins
+  - Fluid typography using responsive text classes
+
+### Key Features
+- Smooth scroll-based animations
+- Responsive design that works across all device sizes
+- Interactive UI elements with hover effects
+- Performance optimized with `useCallback`
+- Accessible markup structure
