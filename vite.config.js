@@ -6,10 +6,9 @@ import path from 'path'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/Academically-Global---SWE-Assignment',
+  base: '/Academically-Global---SWE-Assignment/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
